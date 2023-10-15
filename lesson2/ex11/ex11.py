@@ -1,4 +1,3 @@
-# Define the input string
 def add_underscore_between_characters(input):
     result = ""
     for char in input:
@@ -10,5 +9,4 @@ def add_underscore_between_characters(input):
 
 word = "word"
 
-# Print the result
 print(add_underscore_between_characters(word))

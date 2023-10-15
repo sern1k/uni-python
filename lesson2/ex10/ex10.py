@@ -1,6 +1,5 @@
-def count_words_in_string(string):
-    # Divide the string into lines
-    lines = string.split('\n')
+def count_words_in_string(line):
+    lines = line.split('\n')
 
     counter = 0
     for line in lines:
@@ -9,13 +8,11 @@ def count_words_in_string(string):
 
     return counter
 
-# Example multi-line string
-string = """
+line = """
 This is
 an example
 multi-line
 string
 """
 
-# Call the function and display the result
-print("Number of words in the string: ", count_words_in_string(string))
+print("Number of words in the string: ", count_words_in_string(line))
