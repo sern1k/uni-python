@@ -4,9 +4,9 @@ from ex18 import count_zeros_in_large_number
 
 class TestCountZerosInLargeNumber(unittest.TestCase):
     def test_count_zeros(self):
-        number = 102030405060700
+        number = 10203040506070
         result = count_zeros_in_large_number(number)
-        self.assertEqual(result, 8)
+        self.assertEqual(result, 7)
 
     def test_no_zeros(self):
         number = 123456789
