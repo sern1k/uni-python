@@ -1,7 +1,6 @@
-def amount_of_words(line):
-    words = line.split()
-    return len(words)
+def word_length(line):
+    return sum(len(word) for word in line)
 
 line = "This is an example string"
 
-print("Amount of words in line: " + str(amount_of_words(line)))
+print("Amount of words in line: " + str(word_length(line)))
