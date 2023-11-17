@@ -103,7 +103,7 @@ print("Compare f5 and f6:", cmp_frac(f5, f6))
 print("Compare f1 and f6:", cmp_frac(f1, f6))
 print("Compare f6 and f1:", cmp_frac(f6, f1))
 
-print("\ncompare")
+print("\nas float")
 print("f5 as float:", frac2float(f5))
 print("f3 as float:", frac2float(f3))
 print("f2 as float:", frac2float(f2))
