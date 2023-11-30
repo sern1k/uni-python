@@ -3,7 +3,6 @@ from random import choice
 
 def determine_winner(user_choice, computer_choice):
   if user_choice == computer_choice:
-    print(user_choice, computer_choice)
     return "Remis"
   elif (
     (user_choice == "Kamień" and computer_choice == "Nożyce") or
@@ -12,7 +11,6 @@ def determine_winner(user_choice, computer_choice):
   ):
     return "Gratulacje, wygrałeś!"
   else:
-    print(user_choice, computer_choice)
     return "Przegrałeś. Spróbuj ponownie."
 
 def play_game(user_choice):
