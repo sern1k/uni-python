@@ -40,19 +40,19 @@ class Rectangle:
     return abs(self.pt2.y - self.pt1.y)
 
   @property
-  def topleft(self):
+  def top_left(self):
     return Point(self.left, self.top)
 
   @property
-  def bottomleft(self):
+  def bottom_left(self):
     return Point(self.left, self.bottom)
 
   @property
-  def topright(self):
+  def top_right(self):
     return Point(self.right, self.top)
 
   @property
-  def bottomright(self):
+  def bottom_right(self):
     return Point(self.right, self.bottom)
 
   @property

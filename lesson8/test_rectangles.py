@@ -16,10 +16,10 @@ def test_attributes():
   assert rectangle.right == 4
   assert rectangle.width == 3
   assert rectangle.height == 4
-  assert rectangle.topleft == Point(1, 6)
-  assert rectangle.bottomleft == Point(1, 2)
-  assert rectangle.topright == Point(4, 6)
-  assert rectangle.bottomright == Point(4, 2)
+  assert rectangle.top_left == Point(1, 6)
+  assert rectangle.bottom_left == Point(1, 2)
+  assert rectangle.top_right == Point(4, 6)
+  assert rectangle.bottom_right == Point(4, 2)
 
 if __name__ == "__main__":
   pytest.main()
