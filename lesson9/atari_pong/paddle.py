@@ -10,7 +10,7 @@ class Paddle(Turtle):
     self.penup()
     self.goto(position)
     self.last_move_time = time.time()
-    self.move_delay = 0.07  # Ustawienie opóźnienia na 0.1 sekundy
+    self.move_delay = 0.07
 
   def go_up(self):
     current_time = time.time()
