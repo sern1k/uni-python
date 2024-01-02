@@ -10,6 +10,7 @@ def main():
   game_over = False
 
   screen = pygame.display.set_mode(SIZE)
+  pygame.display.set_caption("Connect Four")
   draw_board(board, screen)
   pygame.display.update()
 
