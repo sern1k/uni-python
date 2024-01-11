@@ -2,7 +2,7 @@ import pygame
 import sys
 from game_logic import create_board, draw_board, is_valid_location, get_next_open_row, drop_piece, winning_move
 from ai_logic import minimax
-from constants import SIZE, SQUARE_SIZE, RADIUS, PLAYER_1_PIECE, PLAYER_2_PIECE, EMPTY, RED, YELLOW, BLACK, AI_LEVEL
+from constants import SIZE, SQUARE_SIZE, RADIUS, PLAYER_1_PIECE, PLAYER_2_PIECE, EMPTY, RED, YELLOW, BLACK, AI_LEVEL, ROW_COUNT, TEXT_PLACE
 
 def main():
   pygame.init()
@@ -14,7 +14,7 @@ def main():
   draw_board(board, screen)
   pygame.display.update()
 
-  myfont = pygame.font.SysFont("monospace", 75)
+  font = pygame.font.SysFont("Helvetica", 80)
 
   while not game_over:
     for event in pygame.event.get():
@@ -24,7 +24,7 @@ def main():
       if event.type == pygame.MOUSEMOTION:
         pygame.draw.rect(screen, BLACK, (0, 0, SIZE[0], SQUARE_SIZE))
         posx = event.pos[0]
-        if board[0][int(posx // SQUARE_SIZE)] == EMPTY:
+        if board[ROW_COUNT - 1][int(posx // SQUARE_SIZE)] == EMPTY:
           pygame.draw.circle(screen, RED, (int(posx), SQUARE_SIZE // 2), RADIUS)
 
       pygame.display.update()
@@ -39,8 +39,8 @@ def main():
           drop_piece(board, row, col, PLAYER_1_PIECE)
 
           if winning_move(board, PLAYER_1_PIECE):
-            label = myfont.render("Player 1 wins!", 1, RED)
-            screen.blit(label, (40, 10))
+            label = font.render("Player 1 wins!", 1, RED)
+            screen.blit(label, TEXT_PLACE)
             game_over = True
 
           draw_board(board, screen)
@@ -53,8 +53,8 @@ def main():
             drop_piece(board, row, col, PLAYER_2_PIECE)
 
             if winning_move(board, PLAYER_2_PIECE):
-              label = myfont.render("Player 2 wins!", 1, YELLOW)
-              screen.blit(label, (40, 10))
+              label = font.render("Player 2 wins!", 1, YELLOW)
+              screen.blit(label, TEXT_PLACE)
               game_over = True
 
             draw_board(board, screen)
