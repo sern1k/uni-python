@@ -18,20 +18,16 @@ def draw_board(board, screen):
       elif board[r][c] == PLAYER_2_PIECE:
         pygame.draw.circle(screen, YELLOW, (c * SQUARE_SIZE + SQUARE_SIZE // 2, SIZE[1] - r * SQUARE_SIZE - SQUARE_SIZE // 2), RADIUS)
 
-
 def is_valid_location(board, col):
   return board[ROW_COUNT - 1][col] == EMPTY
-
 
 def get_next_open_row(board, col):
   for row in range(ROW_COUNT):
     if board[row][col] == EMPTY:
       return row
 
-
 def drop_piece(board, row, col, piece):
   board[row][col] = piece
-
 
 def winning_move(board, piece):
   for r in range(ROW_COUNT):
